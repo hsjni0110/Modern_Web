@@ -1,14 +1,14 @@
 import React from 'react'
 import About from '../sections/About'
 import Explore from '../sections/Explore'
-import Feedback from '../components/Feedback'
+import Feedback from '../sections/Feedback'
 import Footer from '../components/Footer'
-import GetStarted from '../components/GetStarted'
+import GetStarted from '../sections/GetStarted'
 import Hero from '../sections/Hero'
-import Insights from '../components/Insights'
+import Insights from '../sections/Insights'
 import Navbar from '../components/Navbar'
-import WhatsNew from '../components/WhatsNew'
-import World from '../components/World'
+import WhatsNew from '../sections/WhatsNew'
+import World from '../sections/World'
 
 type Props = {}
 
@@ -24,12 +24,15 @@ const Home = (props: Props) => {
       </div>
       <div className='relative'>
         <GetStarted />
-        <div className='z-0 gradient-04'/>
+        <div className='z-0 gradient-04' />
         <WhatsNew />
       </div>
       <World />
-      <Insights />
-      <Feedback />
+      <div className='relative'>
+        <Insights />
+        <div className='z-0 gradient-04' />
+        <Feedback />
+      </div>
       <Footer />
     </div>
   )
